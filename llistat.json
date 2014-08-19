@@ -1,0 +1,50 @@
+[
+    {
+        "id": "v1",
+        "coords": "0.6133676,41.6166134,0.0",
+        "properties": {
+            "tipus": "velocitat",
+            "name": "Passeig de Ronda - Bisbe Irurita"
+        }        
+    },
+    {        
+        "id": "v2",
+        "coords": "0.6206524,41.6152899,0.0",
+        "properties": {
+            "tipus": "velocitat",
+            "name": "Rambla d'Aragó - Ramón y Cajal (direcció riu)"
+        }        
+    },
+    {
+        "id": "v3",
+        "coords": "0.6184643,41.6071648,0.0",
+        "properties": {
+            "tipus": "velocitat",
+            "name": "Cos-Gayón - Ton Sirera (Entrada pont dels instituts)"    
+        }        
+    },
+    {
+        "id": "s1",
+        "coords": "0.6277791,41.6227932,0.0",
+        "properties": {
+            "tipus": "semàfor vermell",
+            "name": "Príncep de Viana - Prat de la Riba (direcció RENFE)"
+        }        
+    },
+    {
+        "id": "s2",
+        "coords": "0.6181848,41.6213857,0.0",
+        "properties": {
+            "tipus": "semàfor vermell",
+            "name": "Rovira Roure (abans del Passeig de Ronda direcció Alpicat)"
+        }        
+    },
+    {
+        "id": "s3",
+        "coords": "0.6196037,41.6131001,0.0",
+        "properties": {
+            "tipus": "semàfor vermell",
+            "name": "Rambla d'Aragó (abans del Col·legi Santa Anna direcció riu)"    
+        }        
+    }
+]
