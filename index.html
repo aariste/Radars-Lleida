@@ -7,12 +7,47 @@
     <meta name="description" content="Radars-lleida : Radars Lleida">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
     <title>Radars-lleida</title>
   </head>
 
   <body>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <script>
+      function main() {        
+        cartodb.createVis('map', 'http://aariste.cartodb.com/api/v2/viz/1a3e6078-2852-11e4-b7ac-0e10bcd91c2b/viz.json', {        
+            shareable: true,
+            title: true,
+            description: true,
+            search: false,
+            tiles_loader: true,
+            center_lat: 41.615,
+            center_lon: 0.65,
+            zoom: 14
+        })
+        .done(function(vis, layers) {
+          // layer 0 is the base layer, layer 1 is cartodb layer
+          // setInteraction is disabled by default
+          layers[1].setInteraction(true);
+          layers[1].on('featureOver', function(e, pos, latlng, data) {
+            cartodb.log.log(e, pos, latlng, data);
+          });
 
+          // you can get the native map to work with it
+          // depending if you use google maps or leaflet
+          map = vis.getNativeMap();
+
+          // now, perform any operations you need
+          // map.setZoom(3)
+          // map.setCenter(new google.maps.Latlng(...))
+        })
+        .error(function(err) {
+          console.log(err);
+        });
+      }
+
+      window.onload = main;
+    </script>
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
